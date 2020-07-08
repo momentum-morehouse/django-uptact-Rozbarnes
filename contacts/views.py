@@ -29,10 +29,10 @@ def edit_contact(request, pk):
     else:
         form = ContactForm(data=request.POST, instance=contact)
         if form.is_valid():
-            form.save()
-            return redirect(to='list_contacts')
+                form.save()
+        return redirect(to='list_contacts')
 
-    return render(request, "contacts/edit_contact.html", {
+        return render(request, "contacts/edit_contact.html", {
         "form": form,
         "contact": contact
     })
@@ -46,3 +46,9 @@ def delete_contact(request, pk):
 
     return render(request, "contacts/delete_contact.html",
                   {"contact": contact})
+
+def contact_detail(request,pk):
+    contact = get_object_or_404(Contact, pk=pk)
+    return render(request,"contacts/contact_view.html",{"contact": contact})
+    
+
