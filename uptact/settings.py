@@ -33,11 +33,11 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS =[
-    "django-uptact-Rozbarnes--rozbarnes.repl.co",]
+    ["django-uptact-Rozbarnes--rozbarnes.repl.co",'django-uptact-rozbarnes.rozbarnes.repl.co', "django-uptact-Rozbarnes.rozbarnes.repl.co"]
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS =[
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
