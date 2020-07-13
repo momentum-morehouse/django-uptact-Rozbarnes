@@ -51,12 +51,11 @@ def view_contact(request,pk):
     contact = get_object_or_404(Contact, pk=pk)
     return render(request, "contacts/contact_view.html",{"contact": contact})
     
-"""def view_contact(request, pk):
-    contact = 
-    (Contact, pk=pk)
+def view_contact(request, pk):
+    contact = get_object_or_404,contacts/int.:pk>/notes/
+     pk=pk)
     if request.method == 'GET'
         form = NoteForm()
-
     else:
         form=NoteForm
         (data=request.POST)
@@ -67,6 +66,5 @@ def view_contact(request,pk):
     return redirect
     (to='contact_detail')
 
-    return render(request,
-    "contacts/vint.:pk>/notes",
-    {'form': form})"""
+    return render(request,contacts/<int.:pk>/notes,
+    {'form': form})
